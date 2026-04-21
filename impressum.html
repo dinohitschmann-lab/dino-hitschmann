@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Impressum – Dino Hitschmann</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --white: #fafaf8;
+      --black: #1a1a18;
+      --gray-light: #f0efeb;
+      --gray-mid: #c8c7c0;
+      --gray-text: #6b6b62;
+      --accent: #3d7a5e;
+      --accent-light: #e8f2ec;
+      --accent-hover: #2f5f48;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--black);
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 5vw;
+      background: rgba(250,250,248,0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--gray-light);
+      box-shadow: 0 1px 12px rgba(0,0,0,0.04);
+    }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a {
+      font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gray-text); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--black); }
+    main { padding-top: 80px; }
+    .page-hero {
+      padding: 5rem 5vw 4rem; background: var(--gray-light);
+      border-bottom: 1px solid #e2e0da;
+    }
+    .page-hero-inner { max-width: 720px; margin: 0 auto; }
+    .page-label {
+      font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.7rem;
+    }
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15; color: var(--black);
+    }
+    .page-content { max-width: 720px; margin: 0 auto; padding: 4rem 5vw 5rem; }
+    .page-content h2 {
+      font-family: var(--serif);
+      font-size: 1.3rem; color: var(--black);
+      margin: 2.4rem 0 0.6rem;
+    }
+    .page-content h2:first-child { margin-top: 0; }
+    .page-content p { font-size: 0.95rem; color: var(--gray-text); margin-bottom: 0.9rem; line-height: 1.75; }
+    .page-content a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .page-content a:hover { color: var(--accent-hover); }
+    .divider { width: 36px; height: 2px; background: var(--accent); margin-bottom: 2rem; }
+    .info-block {
+      background: var(--gray-light); border-radius: 5px;
+      padding: 1.4rem 1.6rem; margin: 1.4rem 0;
+      font-size: 0.9rem; color: var(--black); line-height: 1.75;
+    }
+    .info-block strong { display: block; font-weight: 500; margin-bottom: 0.3rem; color: var(--black); }
+    footer {
+      background: var(--black); color: var(--white);
+      padding: 2.5rem 5vw;
+    }
+    .footer-inner {
+      max-width: 920px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.2rem;
+    }
+    .footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.45); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.2); }
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--white); padding: 1.5rem 5vw; gap: 1.2rem;
+        border-bottom: 1px solid var(--gray-light);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <a class="nav-name" href="index.html">Dino Hitschmann</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#ueber">Über mich</a></li>
+      <li><a href="index.html#angebote">Angebote</a></li>
+      <li><a href="index.html#ansatz">Ansatz</a></li>
+      <li><a href="index.html#kosten">Kosten</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <p class="page-label">Rechtliches</p>
+        <h1 class="page-title">Impressum</h1>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="divider"></div>
+
+      <h2>Angaben gemäß § 25 MedienG</h2>
+      <div class="info-block">
+        <strong>Inhaber und Verantwortlicher</strong>
+        Dino Hitschmann<br>
+        Sozialarbeiter (BA)<br>
+        Wien, Österreich
+      </div>
+
+      <h2>Kontakt</h2>
+      <div class="info-block">
+        E-Mail: <a href="mailto:dino.hitschmann@gmail.com">dino.hitschmann@gmail.com</a>
+      </div>
+
+      <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+      <p>Berufsbezeichnung: Sozialarbeiter (BA)</p>
+      <p>Zuerkannt in: Österreich</p>
+      <p>Zuständige Kammer / Berufsverband: Österreichischer Berufsverband der Sozialen Arbeit (OBDS)</p>
+      <p>Das Angebot auf dieser Website umfasst <strong>psychosoziale Begleitung im Rahmen der Sozialen Arbeit</strong>. Es handelt sich ausdrücklich <strong>nicht</strong> um Psychotherapie, psychologische Beratung oder Gesundheitsdienstleistungen im Sinne des Psychologengesetzes oder Psychotherapiegesetzes.</p>
+
+      <h2>Zweck der Website</h2>
+      <p>Diese Website dient der Information über psychosoziale Begleitangebote für trans Personen, Menschen mit ADHS und Angehörige in Wien.</p>
+
+      <h2>Haftungsausschluss</h2>
+      <p>Die Inhalte dieser Website wurden sorgfältig erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich für eigene Inhalte verantwortlich. Links zu externen Websites Dritter liegen außerhalb meines Verantwortungsbereichs.</p>
+
+      <h2>Urheberrecht</h2>
+      <p>Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem österreichischen Urheberrecht. Jede Vervielfältigung, Bearbeitung, Verbreitung oder Verwertung außerhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung des Inhabers.</p>
+
+      <p style="margin-top:2.5rem; font-size:0.82rem; color:var(--gray-mid);">Stand: 2025</p>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="footer-inner">
+      <nav class="footer-links" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html#kontakt">Kontakt</a>
+      </nav>
+      <span class="footer-copy">© 2025 Dino Hitschmann · Wien</span>
+    </div>
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
